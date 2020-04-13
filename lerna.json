@@ -1,0 +1,11 @@
+{
+  "lerna": "2.11.0",
+  "version": "0.2.1",
+  "useWorkspaces": true,
+  "npmClient": "yarn",
+  "command": {
+    "run": {
+      "stream": true
+    }
+  }
+}

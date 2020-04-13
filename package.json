@@ -1,0 +1,17 @@
+{
+  "private": true,
+  "scripts": {
+    "prepare": "lerna run prepare",
+    "postinstall": "lerna run postinstall",
+    "rebuild:browser": "theia rebuild:browser",
+    "publish:latest": "lerna publish --registry=https://registry.npmjs.org/ --exact --skip-git",
+    "publish:next": "lerna publish --registry=https://registry.npmjs.org/ --exact --canary=next --npm-tag=next --skip-git --yes"
+  },
+  "devDependencies": {
+    "lerna": "2.11.0"
+  },
+  "workspaces": [
+    "theia-vue-extension",
+    "browser-app"
+  ]
+}

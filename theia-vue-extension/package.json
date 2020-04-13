@@ -1,0 +1,52 @@
+{
+  "name": "@devpodio/theia-vue-extension",
+  "description": "Vuejs support for the Theia IDE",
+  "publishConfig": {
+    "access": "public"
+  },
+  "keywords": [
+    "theia-extension",
+    "vue",
+    "vetur",
+    "theia vue"
+  ],
+  "license": "Apache-2.0",
+  "version": "0.2.1",
+  "files": [
+    "data",
+    "lib",
+    "src",
+    "languages"
+  ],
+  "dependencies": {
+    "@devpodio/vue-language-server": "^0.0.48",
+    "@theia/callhierarchy": "next",
+    "@theia/core": "next",
+    "@theia/languages": "next",
+    "@theia/monaco": "next",
+    "@theia/process": "next",
+    "@theia/textmate-grammars": "next"
+  },
+  "devDependencies": {
+    "rimraf": "latest",
+    "typescript": "latest"
+  },
+  "scripts": {
+    "prepare": "yarn run clean && yarn run build",
+    "clean": "rimraf lib",
+    "build": "tsc",
+    "watch": "tsc -w"
+  },
+  "author": "Uni Sayo <unibtc@gmail.com> (https://github.com/devpodio)",
+  "repository": "https://github.com/devpodio/theia-vue-extension",
+  "bugs": {
+    "url": "https://github.com/devpodio/theia-vue-extension/issues"
+  },
+  "homepage": "https://github.com/devpodio/theia-vue-extension#readme",
+  "theiaExtensions": [
+    {
+      "frontend": "lib/browser/vue-frontend-module",
+      "backend": "lib/node/vue-backend-module"
+    }
+  ]
+}
